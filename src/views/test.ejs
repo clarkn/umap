@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript"
+      src="js/vendor/jquery.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/lodash.compat.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/eventing.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/porthole.js">
+    </script>
+    <script type="text/javascript"
+      src="js/test/test.js">
+    </script>
+    <script>
+      window.onload = function(){
+        // Create a proxy window to send to and receive
+        // messages from the iFrame
+        umap.Eventing.init('/proxy.html');
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h4>Overlays</h4>
+      <ol class="list-unstyled">
+        <li><a href="#" id="map_overlay_create">Map Overlay Create</a></li>
+        <li><a href="#" id="map_overlay_remove">Map Overlay Remove</a></li>
+        <li><a href="#" id="map_overlay_hide">Map Overlay Hide</a></li>
+        <li><a href="#" id="map_overlay_show">Map Overlay Show</a></li>
+        <li><a href="#" id="map_overlay_update">Map Overlay Update</a></li>
+      </ol>
+    </div>
+    <div class="sidebar">
+      <h4>Features</h4>
+      <ol class="list-unstyled">
+        <li><a href="#" id="map_feature_plot">Map Feature Plot</a></li>
+        <li><a href="#" id="map_feature_plot_url">Map Feature Plot URL</a></li>
+        <li><a href="#" id="map_feature_unplot">Map Feature Unplot</a></li>
+        <li><a href="#" id="map_feature_hide">Map Feature Hide</a></li>
+        <li><a href="#" id="map_feature_show">Map Feature Show</a></li>
+        <li><a href="#" id="map_feature_selected">Map Feature Selected</a></li>
+        <li><a href="#" id="map_feature_deselect">Map Feature Deselect</a></li>
+        <li><a href="#" id="map_feature_update">Map Feature Update</a></li>
+      </ol>
+    </div>
+    <div class="sidebar">
+      <h4>Views</h4>
+      <ol class="list-unstyled">
+        <li><a href="#" id="map_view_zoom">Map View Zoom</a></li>
+        <li><a href="#" id="map_view_center_overlay">Map View Center Overlay</a></li>
+        <li><a href="#" id="map_view_center_feature">Map View Center Feature</a></li>
+        <li><a href="#" id="map_view_center_location">Map View Center Location</a></li>
+        <li><a href="#" id="map_view_center_bounds">Map View Center Bounds</a></li>
+        <li><a href="#" id="map_view_clicked">Map View Clicked</a></li>
+      </ol>
+    </div>
+    <div class="sidebar">
+      <h4>Statuses</h4>
+      <ol class="list-unstyled">
+        <li><a href="#" id="map_status_request">Map Status Request</a></li>
+        <li><a href="#" id="map_status_view">Map Status View</a></li>
+        <li><a href="#" id="map_status_format">Map Status Format</a></li>
+        <li><a href="#" id="map_status_about">Map Status About</a></li>
+        <li><a href="#" id="map_status_selected">Map Status Selected</a></li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* ==CONTAINERS== */
+.map_container {
+	height: 650px;
+	width: 100%;
+	border: 0;
+}
+.sidebar_container {
+	height: 650px;
+	padding: 0 10px;
+	border: 0;
+}
+.logging_container {
+	height: 200px;
+	width: 100%;
+	border: 0;
+}
+.map-canvas {
+	height: 610px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* ==TOOLBAR== */
+.room-manager {
+	display: block;
+	background-color: #FFFFFF;
+}
+.room-manager-menu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: #FFF;
+	width: 100%;
+}
+.room-manager h4 {
+	margin: 0;
+}
+.room-manager h4 a {
+	background-color: #428BCA;
+	color: #FFF;
+	display: block;
+	padding: 10px 25px;
+	text-decoration: none;
+	cursor: pointer;
+}
+/*.room-manager h4 a:hover, h4 a:active {
+	background-color: #2A6496;
+	color: #EEE;
+}*/
+#room-manager-icon {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	cursor: pointer;
+}
+
+/* ==MENU== */
+.room-manager-menu .row, .room-manager-menu .room-manager-menu-col {
+	padding: 0;
+	margin: 5px 0;
+}
+.room-manager-menu {
+	border: 1px solid #DDD;
+	border-top: 0x;
+}
+.room-manager-menu-col-1 {
+	border-right: 1px solid #DDD;
+}
+.room-manager-menu .room-manager-selector {
+	overflow: auto;
+	margin: 10px 0 10% 0;
+}
+.room-manager-menu .room-manager-selector .input {
+	margin: 0 0 0 14px;
+	width: 80%;
+	height: 30px;
+	display: inline-block;
+}
+.room-manager-menu .room-manager-selector .btn {
+	width: 12%;
+	max-width: 32px;
+	height: 32px;
+	padding: 0;
+	display: inline-block;
+	border-radius: 0;
+	background-color: #EEE;
+	outline: none;
+	top: -1px;
+}
+.room-manager-menu .room-manager-selector .btn:active,
+.room-manager-menu .room-manager-selector .btn:hover {
+	background-color: #DDD;
+	box-shadow: none;
+}
+
+/* ==ROOMS== */
+.room-manager-menu h5 {
+	margin: 2px 0 5px 2px;
+}
+.room-manager-menu li {
+	width: 100%;
+	padding: 0 15px 0 0;
+	margin: 0;
+}
+.room-manager-menu li a {
+	display: block;
+	padding: 3px 20px;
+	cursor: pointer;
+	text-align: center;
+	background-color: #EEE;
+	color: #000;
+	margin: 3px 2px 0 2px;
+	width: 100%;
+}
+.room-manager-menu li a:hover {
+	background-color: #DDD;
+	text-decoration: none;
+}
+.room-manager-menu .current a,
+.room-manager-menu .current a:hover {
+	background-color: #CCC;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+.room-manager-menu .user a,
+.room-manager-menu .user a:hover {
+	cursor: default;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <script type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/jquery.js">
+    </script>
+    <script type="text/javascript"
+        src="js/vendor/lodash.compat.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/porthole.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/eventing.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/relay.js">
+    </script>
+    <script>
+        window.onload = function () {
+            $(window).bind('relayLoaded', function () {
+                console.log(relay);
+                console.log('relay has loaded');
+            });
+            loadRelay('/');
+        };
+    </script>
+  </body>
+
+</html>

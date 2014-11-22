@@ -1,0 +1,36 @@
+Integration
+-----------
+
+-> Sunday (4/13): 10:00 am - 4:00 pm
+
+1. whenever you do a local publish, you do a global publish
+2. whenever you subscribe locally, subscribe globally
+
+Server
+------
+
+-> complete by 4/11
+
+1. test relay module
+2. write abstraction layer to call local/global pubsub
+3. check-in code
+4. host (if time)
+
+Testers
+-------
+
+-> small set 4/13
+-> full suite 4/20
+
+1. formulate test scenario (bullet points)
+2. UI test (Selenium or QUnit)
+3. IFrame test
+
+ESRI Client
+-----------
+
+1. Eval (4/10)
+2. Critical functionality (4/13)
+3. Integration (4/13)
+4. Full functionality (4/20)
+

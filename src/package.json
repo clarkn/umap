@@ -1,0 +1,22 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test"
+  },
+  "dependencies": {
+    "express": "3.5.1",
+    "redis": "*",
+    "socket.io": "~0.9.6",
+    "ejs": "*"
+  },
+  "devDependencies": {
+    "mocha": "1.18.x",
+    "should": "3.3.x",
+    "grunt": "^0.4.4",
+    "grunt-mocha": "^0.4.10",
+    "grunt-mocha-test": "^0.10.2",
+    "grunt-mocha-phantomjs": "^0.4.3"
+  }
+}

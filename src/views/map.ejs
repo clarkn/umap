@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript"
+      src="js/vendor/jquery.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/lodash.compat.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/eventing.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/porthole.js">
+    </script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=<%= map_key %>&sensor=true" >
+    </script>
+    <script type="text/javascript"
+      src="js/map/umap.js">
+    </script>
+    <script type="text/javascript"
+      src="js/map/googlev3/google_v3.js">
+    </script>
+    <script type="text/javascript"
+      src="js/map/googlev3/overlay.js">
+    </script>
+    <script type="text/javascript"
+      src="js/map/googlev3/KmlFeature.js">
+    </script>
+    <script type="text/javascript"
+      src="js/map/googlev3/GeoJsonFeature.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/geojson.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/socket.io.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/relay.js">
+    </script>
+    <script type="text/javascript"
+      src="js/map/roomManager.js">
+    </script>
+  </head>
+
+  <body>
+    <div id="room-manager" class="room-manager">
+      <div id="room-manager-tab">
+        <h4><a>Room Manager</a></h4>
+        <span class="glyphicon glyphicon-chevron-down" id="room-manager-icon"></span>
+      </div>
+      <div id="room-manager-menu" class="room-manager-menu">
+        <div class="row">
+          <div class="col-sm-4 room-manager-menu-col-1">
+            <form class="room-manager-selector">
+              <input type="text" id="roomName" name="roomName" class="input" placeholder="New room name">
+              <button type="button" id="roomNameSubmit" class="btn glyphicon glyphicon-ok" alt="Submit"></button>
+            </form>
+            <form class="room-manager-selector">
+              <input type="text" id="userName" name="userName" class="input" placeholder="User name">
+              <button type="button" id="userNameSubmit" class="btn glyphicon glyphicon-ok" alt="Submit"></button>
+            </form>
+          </div>
+          <div class="col-sm-4 room-manager-menu-col-2">
+            <h5>Rooms</h5>
+            <ul class="list-unstyled" id="room-list"></ul>
+          </div>
+          <div class="col-sm-4 room-manager-menu-col-3">
+            <h5>Users</h5>
+            <ul class="list-unstyled" id="room-users"></ul>
+          </div>
+        </div>
+      </div>
+  </divf>
+    <div id="map-canvas" class="map-canvas"></div>
+    <script>
+      $(document).ready(function(){
+        // Create a proxy window to send to and receive
+        // messages from the iFrame
+        //new uMap('googlev3', 'map-canvas');
+        umap.Eventing.init('/proxy.html');
+        if (_(window.loadRelay).isFunction()) {
+          $(window).bind('socketConnected', function () {
+            new uMap('googlev3', 'map-canvas');
+          });
+        } else {
+          $(window).bind('eventingReady', function () {
+            new uMap('googlev3', 'map-canvas');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

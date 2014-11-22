@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript"
+      src="js/vendor/jquery.js">
+    </script>
+    <script type="text/javascript"
+      src="js/vendor/lodash.compat.min.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/porthole.js">
+    </script>
+    <script type="text/javascript"
+      src="js/eventing/eventing.js">
+    </script>
+    <script type="text/javascript"
+      src="js/loader/subscribe.js">
+    </script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+        <h4>Feature Details</h4>
+        Name: <input type="text" size="20" id='feature_name' value="gmu"/>
+        ID: <input type="text" size="15" id='feature_id' value="gmu_id"/>
+        <h4>Plot KML/GeoJSON</h4>
+        <input type="text" size="30" id="payload" value="http://trmm.gsfc.nasa.gov/trmm_rain/Events/30_day_average.kml"/>
+        <select id="format" />
+            <option value='KML'>KML</option>
+            <option value='geojson'>GeoJSON</option>
+        </select>
+        <button id="map_feature_plot_url" name='Plot URL'>Plot URL</button>
+        <button id="map_feature_plot" name='Plot'>Plot</button>
+        <h4>Plot Point</h4>
+        Lat: <input type="text" size="5" id="lat" value='38.829'/> &nbsp;&nbsp;
+        Lng: <input type="text" size="5" id="lng" value='-77.309'/>
+        <button id="map_feature_plot_point" name='Plot point'>Plot Point</button>
+        <h4>Unplot/Hide/Unhide Features</h4>
+        <select id="unplot_feature_id">
+        </select>
+        <button id="unplot_feature" name="Unplot Feature">Unplot</button>
+        <button id="hide_feature" name="Hide Feature">Hide</button>
+        <button id="unhide_feature" name="Unhide Feature">Unhide</button>
+        <button id="center_feature" name="Center Feature">Center</button>
+    <div>
+
+    </div>
+    <script>
+      $(document).ready(function(){
+        // Create a proxy window to send to and receive
+        // messages from the iFrame
+        umap.Eventing.init('/proxy.html');
+        $(window).bind('eventingReady', function() {
+          loader_subscribe();
+        });
+      });
+    </script>
+  </body>
+</html>

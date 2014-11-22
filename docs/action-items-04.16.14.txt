@@ -1,0 +1,10 @@
+Server TODO:
+------------
+
+1. Unit tests for util module
+2. Unit tests for room management
+3. Unit tests for pubsub system
+4. Add socket:name pairing
+5. Add channel for chat
+6. Look into multiple sockets per browser
+

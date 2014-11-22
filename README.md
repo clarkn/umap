@@ -1,15 +1,12 @@
 DI2E Open Source Common Map Widget API Implementation (uMap)
-=======
-oscmapi
-=======
 
-To clone the repo:
+Defense Intelligence Information Enterprise (DI2E) Open Source Common Map Widget
+API (CMAPI) Implementation: This project is to implement the CMAPI in an
+environment outside of the Ozone Widget Framework using different communication
+models to evaluate the API and its robustness.
 
-    git clone https://git.c4i.gmu.edu/oscmap.git
-
-If you have SSL verification errors:
-
-    git config http.sslVerify false
+Code was produced by a team of GMU students participating in a semester
+course.
 
 ### Setup
 
@@ -35,7 +32,7 @@ You should then run the server with:
     nodemon app.js
 
 If you wish to only have nodemon restart on changes that require a restart
-then perform the following steps: 
+then perform the following steps:
 
     Create a file called 'nodemon.json' in the same directory as app.js
     Paste the following into the file and restart nodemon
@@ -50,4 +47,3 @@ files (js/css/html) to get updated in the page you're looking at. The shortcut
 for this is:
 
 > <Shift><Ctrl><Del>
-
